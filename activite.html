@@ -1,0 +1,249 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Opérations avec les relatifs – Activités</title><style>
+:root{--bg:#f5f7fb;--panel:#fff;--text:#172033;--muted:#68748a;--line:#dfe6f1;--accent:#6c4cf1;--accent2:#00a7c4;--ok:#1c9b63;--warn:#ef5c76;--shadow:0 14px 36px rgba(31,44,74,.10);--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 15% -10%,#ece8ff 0,transparent 34%),radial-gradient(circle at 95% 0,#ddf7fb 0,transparent 28%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.58}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(245,247,251,.86);backdrop-filter:blur(16px);border-bottom:1px solid rgba(223,230,241,.9)}
+.topbar-inner{max-width:1440px;margin:auto;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;gap:16px}.brand{display:flex;align-items:center;gap:12px;font-weight:850}.brand-badge{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 8px 22px rgba(108,76,241,.25)}.brand small{display:block;color:var(--muted);font-weight:600;font-size:.78rem}
+.actions{display:flex;gap:10px;flex-wrap:wrap}button{border:0;border-radius:13px;padding:10px 14px;font:inherit;font-weight:750;cursor:pointer;transition:.2s}button:hover{transform:translateY(-1px)}.btn-soft{background:#fff;color:var(--text);border:1px solid var(--line)}.btn-primary{background:linear-gradient(135deg,var(--accent),#845ef7);color:#fff;box-shadow:0 8px 18px rgba(108,76,241,.22)}
+.layout{max-width:1440px;margin:0 auto;display:grid;grid-template-columns:260px minmax(0,1fr);gap:28px;padding:30px 24px 80px}aside{position:sticky;top:98px;align-self:start}.sidecard{background:rgba(255,255,255,.86);border:1px solid var(--line);border-radius:20px;padding:14px;box-shadow:var(--shadow)}.side-title{font-weight:850;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:6px 8px 10px}.nav-link{display:flex;gap:10px;align-items:center;text-decoration:none;color:#34405a;padding:10px 9px;border-radius:12px;font-weight:700;font-size:.92rem}.nav-link:hover,.nav-link.active{background:#f0edff;color:#5135d8}.nav-link span{width:27px;height:27px;border-radius:9px;display:grid;place-items:center;background:#eef1f6;color:#5c6981;font-size:.78rem;flex:0 0 auto}.nav-link.active span{background:#6c4cf1;color:white}.legend{margin-top:14px;padding:12px 13px;border-radius:16px;background:#fff;border:1px solid var(--line);color:var(--muted);font-size:.82rem}
+main{min-width:0}.hero{background:linear-gradient(135deg,#6947ef 0%,#7c5cff 48%,#00a8c5 125%);border-radius:28px;padding:34px 36px;color:white;box-shadow:0 18px 50px rgba(77,64,180,.22);margin-bottom:26px;position:relative;overflow:hidden}.hero:after{content:"± × ÷";position:absolute;right:28px;top:10px;font-weight:900;font-size:5rem;opacity:.12;letter-spacing:.05em}.hero .eyebrow{font-weight:800;opacity:.82;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}.hero h1{font-size:clamp(1.9rem,4vw,3rem);margin:.25rem 0 .45rem;line-height:1.05}.hero p{max-width:720px;margin:0;opacity:.9}.hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.hero-tags span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);padding:6px 10px;border-radius:999px;font-size:.82rem;font-weight:700}
+article>h1{scroll-margin-top:98px;margin:34px 0 14px;padding:18px 22px;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 26px rgba(31,44,74,.06);font-size:1.48rem;color:#e83f64}article>h1:before{content:attr(data-section);display:inline-grid;place-items:center;width:34px;height:34px;margin-right:10px;border-radius:11px;background:#ffe9ef;color:#e83f64;font-size:.95rem;vertical-align:2px}article h2{color:#5363d7;margin-top:20px}article h3{color:#34405a;margin-top:18px}article p, article li{font-size:.98rem}article strong{font-weight:850}article ul{padding-left:22px}article ol{padding-left:28px}
+article>p,article>ol,article>ul,article>blockquote,article>details,article>table,article>h2,article>h3{background:rgba(255,255,255,.92)}article>p,article>ol,article>ul,article>blockquote{margin:0;padding:12px 18px;border-left:1px solid var(--line);border-right:1px solid var(--line)}article>h2,article>h3{margin-bottom:0;padding:15px 18px;border:1px solid var(--line);border-bottom:0;border-radius:17px 17px 0 0}article>h2+*,article>h3+*{border-top:0}
+.method-grid{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid #acd3ff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}.method-grid th,.method-grid td{vertical-align:top;text-align:left;padding:20px;border-right:1px solid #acd3ff;border-bottom:1px solid #acd3ff;font-weight:400}.method-grid tr>*:last-child{border-right:0}.method-grid tr:last-child>*{border-bottom:0}.method-grid h2{background:none!important;border:0!important;padding:0!important;color:#4a74ce;margin:0 0 8px!important;border-radius:0!important}.method-grid h3{background:none!important;border:0!important;padding:0!important;margin:12px 0 4px!important;color:#34405a;border-radius:0!important}
+table:not(.method-grid){width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 10px 24px rgba(31,44,74,.06);margin:10px 0 18px}table:not(.method-grid) td,table:not(.method-grid) th{padding:15px;vertical-align:top;border-right:1px solid var(--line)}table:not(.method-grid) tr>*:last-child{border-right:0}
+math[display="block"]{display:block;overflow-x:auto;padding:8px 0;text-align:center;font-size:1.06em}img{max-width:100%;height:auto;display:block;margin:12px auto;border-radius:12px}
+.correction{margin:10px 0 18px!important;background:#f2fff8!important;border:1px solid #a8e5c6!important;border-radius:17px!important;overflow:hidden;box-shadow:0 8px 20px rgba(28,155,99,.06)}.correction summary{list-style:none;cursor:pointer;padding:13px 16px;font-weight:850;color:#087847;display:flex;align-items:center;gap:9px;user-select:none}.correction summary::-webkit-details-marker{display:none}.correction summary:before{content:"✓";width:27px;height:27px;display:grid;place-items:center;border-radius:9px;background:#d9f8e8;color:#087847}.correction[open] summary{border-bottom:1px solid #bfead3}.correction[open] summary:after{content:"Masquer";margin-left:auto;font-size:.78rem;color:#4f7f68;font-weight:700}.correction>:not(summary){margin-left:14px;margin-right:14px}.correction p,.correction table,.correction ul{background:transparent!important;border:0!important;box-shadow:none!important}
+blockquote{margin-left:0!important;margin-right:0!important;color:#3d4960}u{text-decoration-color:#8b7cf6;text-decoration-thickness:2px;text-underline-offset:3px}
+.tip{margin-top:14px;padding:12px 14px;border-radius:16px;background:#fff8e8;border:1px solid #f5d99c;color:#7b5b13;font-size:.88rem}
+footer{text-align:center;color:var(--muted);font-size:.82rem;margin-top:30px;padding:20px}
+.focus-mode aside,.focus-mode .topbar .brand small{display:none}.focus-mode .layout{grid-template-columns:1fr;max-width:1120px}.focus-mode article{font-size:1.08em}
+@media(max-width:900px){.layout{grid-template-columns:1fr;padding:20px 14px 60px}aside{display:none}.topbar-inner{padding:0 14px}.brand small{display:none}.hero{padding:28px 22px;border-radius:22px}.hero:after{font-size:3.4rem;right:10px}.method-grid,.method-grid tbody,.method-grid tr,.method-grid th,.method-grid td{display:block;width:100%!important}.method-grid th,.method-grid td{border-right:0;border-bottom:1px solid #acd3ff}.actions button{padding:9px 10px;font-size:.85rem}}
+@media print{.topbar,aside,.actions,.hero-tags,.tip{display:none!important}body{background:#fff}.layout{display:block;padding:0}.hero{box-shadow:none;background:#fff;color:#111;padding:0;margin:0 0 20px}.hero:after{display:none}.correction:not([open])>*:not(summary){display:none}article>h1{box-shadow:none}}
+
+/* Images agrandissables */
+article img{cursor:zoom-in;transition:transform .18s ease,box-shadow .18s ease;}
+article img:hover{transform:scale(1.02);box-shadow:0 12px 30px rgba(15,23,42,.16);}
+.image-lightbox{position:fixed;inset:0;z-index:9999;background:rgba(15,23,42,.88);display:none;align-items:center;justify-content:center;padding:32px;backdrop-filter:blur(4px);}
+.image-lightbox.open{display:flex;}
+.image-lightbox img{max-width:94vw;max-height:90vh;width:auto;height:auto;object-fit:contain;background:white;border-radius:14px;box-shadow:0 24px 70px rgba(0,0,0,.4);cursor:zoom-out;}
+.image-lightbox .close-lightbox{position:absolute;top:18px;right:22px;width:46px;height:46px;border:0;border-radius:50%;background:white;color:#111827;font-size:28px;line-height:1;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.25);}
+.image-lightbox .lightbox-hint{position:absolute;bottom:14px;color:white;font-size:.9rem;background:rgba(0,0,0,.35);padding:7px 12px;border-radius:999px;}
+
+
+article h2{scroll-margin-top:110px} article p{line-height:1.65} details.correction{margin:18px 0 26px} math{font-size:1.08em}.math.display{display:block;overflow-x:auto;padding:.4rem 0}.objective{background:#eefbf8;border-left:5px solid #18a57b;padding:14px 16px;border-radius:12px;margin:16px 0} table{width:100%;border-collapse:collapse;margin:15px 0}td,th{border:1px solid #dde3ee;padding:10px;text-align:center}</style></head><body>
+<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-badge">±</div><div>Opérations avec les relatifs<small>Activités • produit • quotient</small></div></div><div class="actions"><button class="btn-soft" id="focusBtn">Mode projection</button><button class="btn-primary" id="correctionBtn">Afficher toutes les corrections</button></div></div></header>
+<div class="layout"><aside><div class="sidecard"><div class="side-title">Sommaire</div><a class="nav-link" href="#section-1"><span>1</span>Activité 1 : signe d’un
+produit</a><a class="nav-link" href="#section-2"><span>2</span>Activité 2 : Signe d’un quotient</a><a class="nav-link" href="#section-3"><span>3</span>Activité (oral)</a></div></aside><main><section class="hero"><div class="eyebrow">Activités interactives</div><h1>Opérations avec les relatifs</h1><p>Découvrir et comprendre les règles de signes du produit et du quotient.</p></section><article><h2 data-section="1" id="section-1">Activité 1 : signe d’un
+produit</h2>
+<ol type="1">
+<li></li>
+</ol>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>+</mi><mn>3</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">A = ( + 3) \times ( - 2)</annotation></semantics></math></p>
+<ol type="a">
+<li><p>Ecrire A comme une somme</p></li>
+<li><p>Calculer A</p></li>
+<li><p>En utilisant la même méthode, calculer les produits
+suivants :</p></li>
+</ol>
+<blockquote>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>3</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">4 \times ( - 3),</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>9</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">5 \times ( - 9),</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>6</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">( - 6) \times 7</annotation></semantics></math>
+et
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>8</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">( - 8) \times 2</annotation></semantics></math>.</p>
+</blockquote>
+<ol start="2" type="1">
+<li><p><em><br/>
+</em><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mi>−</mi><mrow><mo form="prefix" stretchy="true">(</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>+</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>+</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>+</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">B = - \left( ( - 2) + ( - 2) + ( - 2) + ( - 2) \right)</annotation></semantics></math></p>
+<ol type="a">
+<li><p>Ecrire B comme un produit de deux nombres négatifs</p></li>
+<li><p>Calculer B</p></li>
+<li><p>En utilisant la même méthode, calculer les produits
+suivants :</p></li>
+</ol></li>
+</ol>
+<blockquote>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>4</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>3</mn><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">( - 4) \times ( - 3)</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>9</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">( - 2) \times ( - 9),</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>6</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>5</mn><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">( - 6) \times ( - 5)</annotation></semantics></math>
+et
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>7</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>8</mn><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">( - 7) \times ( - 8)</annotation></semantics></math></p>
+</blockquote>
+<ol start="3" type="1">
+<li><p>Compléter le tableau en fonctions des résultats
+précédents</p></li>
+</ol>
+<table>
+<colgroup>
+<col style="width: 32%"/>
+<col style="width: 32%"/>
+<col style="width: 35%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold">×</mi><annotation encoding="application/x-tex">\mathbf{\times}</annotation></semantics></math></th>
+<th><strong>Positif</strong></th>
+<th><strong>Négatif</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Positif</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Négatif</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<details class="correction"><summary>Afficher la correction</summary>
+<ol type="1">
+<li></li>
+</ol>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>+</mi><mn>3</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">A = ( + 3) \times ( - 2)</annotation></semantics></math></p>
+<ol type="a">
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>+</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>+</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">A = ( - 2) + ( - 2) + ( - 2)</annotation></semantics></math></p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>−</mi><mn>6</mn></mrow><annotation encoding="application/x-tex">A = - 6</annotation></semantics></math></p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>3</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>=</mo><mi>−</mi><mn>12</mn><mo>,</mo></mrow><annotation encoding="application/x-tex">4 \times ( - 3) = - 12,</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>9</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>=</mo><mi>−</mi><mn>45</mn><mo>,</mo></mrow><annotation encoding="application/x-tex">5 \times ( - 9) = - 45,</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>6</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mn>7</mn><mo>=</mo><mi>−</mi><mn>42</mn></mrow><annotation encoding="application/x-tex">( - 6) \times 7 = - 42</annotation></semantics></math>
+et
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>8</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mn>2</mn><mo>=</mo><mi>−</mi><mn>16</mn></mrow><annotation encoding="application/x-tex">( - 8) \times 2 = - 16</annotation></semantics></math>.</p></li>
+</ol>
+<ol start="2" type="1">
+<li><p><em><br/>
+</em><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mi>−</mi><mrow><mo form="prefix" stretchy="true">(</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>+</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>+</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>+</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">B = - \left( ( - 2) + ( - 2) + ( - 2) + ( - 2) \right)</annotation></semantics></math></p>
+<ol type="a">
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mi>−</mi><mrow><mo form="prefix" stretchy="true">(</mo><mn>4</mn><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo form="postfix" stretchy="true">)</mo></mrow><mo>=</mo><mi>−</mi><mn>4</mn><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>=</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>4</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">B = - \left( 4 \times ( - 2) \right) = - 4 \times ( - 2) = ( - 4) \times ( - 2)</annotation></semantics></math></p></li>
+</ol></li>
+</ol>
+<blockquote>
+<p>B est l’opposé de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>+</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>+</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>+</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">( - 2) + ( - 2) + ( - 2) + ( - 2)</annotation></semantics></math>,
+puis on place les parenthèses sans briser les priorités</p>
+</blockquote>
+<ol start="2" type="a">
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>4</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>3</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>=</mo><mi>+</mi><mn>12</mn><mo>=</mo><mn>12</mn></mrow><annotation encoding="application/x-tex">( - 4) \times ( - 3) = + 12 = 12</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>9</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>=</mo><mi>+</mi><mn>18</mn><mo>=</mo><mn>18</mn><mo>,</mo></mrow><annotation encoding="application/x-tex">( - 2) \times ( - 9) = + 18 = 18,</annotation></semantics></math></p></li>
+</ol>
+<blockquote>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>6</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>5</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>=</mo><mi>+</mi><mn>30</mn><mo>=</mo><mn>30</mn></mrow><annotation encoding="application/x-tex">( - 6) \times ( - 5) = + 30 = 30</annotation></semantics></math>
+et
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>7</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>8</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>=</mo><mi>+</mi><mn>56</mn><mo>=</mo><mn>56</mn></mrow><annotation encoding="application/x-tex">( - 7) \times ( - 8) = + 56 = 56</annotation></semantics></math></p>
+</blockquote>
+<ol start="3" type="1">
+<li><p>Compléter le tableau en fonctions des résultats
+précédents</p></li>
+</ol>
+<table>
+<colgroup>
+<col style="width: 32%"/>
+<col style="width: 32%"/>
+<col style="width: 35%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold">×</mi><annotation encoding="application/x-tex">\mathbf{\times}</annotation></semantics></math></th>
+<th><strong>Positif</strong></th>
+<th><strong>Négatif</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Positif</strong></td>
+<td>Positif</td>
+<td>Négatif</td>
+</tr>
+<tr class="even">
+<td><strong>Négatif</strong></td>
+<td>Négatif</td>
+<td>Positif</td>
+</tr>
+</tbody>
+</table>
+<p class="objective">L’objectif est de comprendre que le produit de nombres positifs
+s’étend aux nombres relatifs : deux nombres de signes contraires
+donneront un produit négatif alors que deux nombres de même signe
+donneront un produit positif</p>
+</details><h2 data-section="2" id="section-2">Activité 2 : Signe d’un quotient
+</h2>
+<p class="objective">L’objectif est de déduire une règle sur le quotient de deux relatifs
+à partir du produit de deux nombres négatifs</p>
+<ol type="1">
+<li><p>Compléter les produits suivants à l’aide de quotient</p></li>
+</ol>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>×</mo><mi>…</mi><mo>=</mo><mn>12</mn></mrow><annotation encoding="application/x-tex">4 \times \ldots = 12</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>5</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mi>…</mi><mo>=</mo><mn>130</mn></mrow><annotation encoding="application/x-tex">( - 5) \times \ldots = 130</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn><mo>×</mo><mi>…</mi><mo>=</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>16</mn><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">8 \times \ldots = ( - 16)</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>…</mi><mi>.</mi><mspace width="0.222em"></mspace><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>3</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>=</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>27</mn><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">\ldots.\  \times ( - 3) = ( - 27)</annotation></semantics></math></p>
+<ol start="2" type="1">
+<li><p>En déduire le résultat des calculs suivants</p></li>
+</ol>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>135</mn><mrow><mi>−</mi><mn>10</mn></mrow></mfrac><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mfrac><mrow><mi>−</mi><mn>1</mn></mrow><mrow><mi>−</mi><mn>1</mn></mrow></mfrac><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mfrac><mn>135</mn><mrow><mi>−</mi><mn>3</mn></mrow></mfrac><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mo>−</mo><mfrac><mn>5</mn><mrow><mi>−</mi><mn>2</mn></mrow></mfrac><mspace width="0.222em"></mspace></mrow><annotation encoding="application/x-tex">\frac{135}{- 10}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \frac{- 1}{- 1}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \frac{135}{- 3}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  - \frac{5}{- 2}\ </annotation></semantics></math></p>
+<details class="correction"><summary>Afficher la correction</summary>
+<ol type="1">
+<li><p>Le produit à trou a pour solution un quotient</p></li>
+</ol>
+<ul>
+<li><p>Pour
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>×</mo><mi>…</mi><mo>=</mo><mn>12</mn><mo>,</mo><mspace width="0.222em"></mspace></mrow><annotation encoding="application/x-tex">4 \times \ldots = 12,\ </annotation></semantics></math>on
+cherche une valeur positive vérifiant
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>12</mn><mn>4</mn></mfrac><annotation encoding="application/x-tex">\frac{12}{4}</annotation></semantics></math>.
+La solution est 3</p></li>
+<li><p>Pour
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>5</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mi>…</mi><mo>=</mo><mn>130</mn></mrow><annotation encoding="application/x-tex">( - 5) \times \ldots = 130</annotation></semantics></math>,
+on cherche une solution négative vérifiant
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>130</mn><mrow><mi>−</mi><mn>5</mn></mrow></mfrac><annotation encoding="application/x-tex">\frac{130}{- 5}</annotation></semantics></math>
+or
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>×</mo><mn>26</mn><mo>=</mo><mn>130</mn></mrow><annotation encoding="application/x-tex">5 \times 26 = 130</annotation></semantics></math>.</p></li>
+</ul>
+<p>La solution est
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>130</mn><mrow><mi>−</mi><mn>5</mn></mrow></mfrac><mo>=</mo><mi>−</mi><mn>26</mn></mrow><annotation encoding="application/x-tex">\frac{130}{- 5} = - 26</annotation></semantics></math></p>
+<ul>
+<li><p>Pour
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn><mo>×</mo><mi>…</mi><mo>=</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>16</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">8 \times \ldots = ( - 16),</annotation></semantics></math>
+la solution est négative vaut
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">- 2</annotation></semantics></math>
+mais aussi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mfrac><mn>16</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">- \frac{16}{2}</annotation></semantics></math>.
+Ainsi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mfrac><mn>16</mn><mn>2</mn></mfrac><mo>=</mo><mi>−</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">- \frac{16}{2} = - 2</annotation></semantics></math></p></li>
+<li><p>Pour
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>…</mi><mi>.</mi><mspace width="0.222em"></mspace><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>3</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>=</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>27</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>,</mo><mspace width="0.222em"></mspace></mrow><annotation encoding="application/x-tex">\ldots.\  \times ( - 3) = ( - 27),\ </annotation></semantics></math>la
+solution est positive est vaut 9 mais aussi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>−</mi><mn>27</mn></mrow><mrow><mi>−</mi><mn>3</mn></mrow></mfrac><annotation encoding="application/x-tex">\frac{- 27}{- 3}</annotation></semantics></math>
+. Ainsi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>−</mi><mn>27</mn></mrow><mrow><mi>−</mi><mn>3</mn></mrow></mfrac><mo>=</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">\frac{- 27}{- 3} = 9</annotation></semantics></math></p></li>
+</ul>
+<p>On remarque que le quotient suit la même règle des signes que le
+produit !</p>
+<ol start="2" type="1">
+<li></li>
+</ol>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>135</mn><mrow><mi>−</mi><mn>10</mn></mrow></mfrac><mo>=</mo><mi>−</mi><mn>13</mn><mi>.</mi><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mfrac><mrow><mi>−</mi><mn>1</mn></mrow><mrow><mi>−</mi><mn>1</mn></mrow></mfrac><mo>=</mo><mn>1</mn><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mfrac><mn>135</mn><mrow><mi>−</mi><mn>3</mn></mrow></mfrac><mo>=</mo><mi>−</mi><mrow><mo form="prefix" stretchy="true">(</mo><mfrac><mn>135</mn><mn>3</mn></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mo>=</mo><mi>−</mi><mn>45</mn><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mo>−</mo><mfrac><mn>5</mn><mrow><mi>−</mi><mn>2</mn></mrow></mfrac><mo>=</mo><mi>−</mi><mrow><mo form="prefix" stretchy="true">(</mo><mfrac><mn>5</mn><mrow><mi>−</mi><mn>2</mn></mrow></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mo>=</mo><mi>−</mi><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2.5</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>=</mo><mn>2.5</mn><mspace width="0.222em"></mspace></mrow><annotation encoding="application/x-tex">\frac{135}{- 10} = - 13.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \frac{- 1}{- 1} = 1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \frac{135}{- 3} = - \left( \frac{135}{3} \right) = - 45\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  - \frac{5}{- 2} = - \left( \frac{5}{- 2} \right) = - ( - 2.5) = 2.5\ </annotation></semantics></math></p>
+<p class="objective">L’objectif est de comprendre que le quotient de nombres positifs
+s’étend aux nombres relatifs : deux nombres de signes contraires
+donneront un quotient négatif alors que deux nombres de même signe
+donneront un quotient positif</p>
+</details><h2 data-section="3" id="section-3">Activité (oral)</h2>
+<p class="objective">L’objectif est de comprendre comment trouver rapidement le signe d’un
+produit et quotient de plusieurs nombres relatifs via quelques exemples
+comme ci-dessous.</p>
+<p>Les élèves me proposent un produit et ou un quotient complexe, je
+trouve non pas le résultat mais le signe du résultat. On comprend
+ensemble la méthode et son explication</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>7</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>+</mi><mn>4</mn><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">( - 7) \times ( + 4)</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>+</mi><mn>6</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>3</mn><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">( + 6) \times ( - 2) \times ( - 3)</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>5</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>1</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>8</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">( - 5) \times ( - 1) \times ( - 8) \times ( - 2)</annotation></semantics></math></p>
+<blockquote>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>9</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>+</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>3</mn><mo form="postfix" stretchy="true">)</mo></mrow></mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>6</mn><mo form="postfix" stretchy="true">)</mo></mrow></mfrac><annotation encoding="application/x-tex">\frac{( - 9) \times ( + 2) \times ( - 3)}{( - 6)}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>+</mi><mn>12</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>4</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>1</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>+</mi><mn>5</mn><mo form="postfix" stretchy="true">)</mo></mrow></mrow><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>2</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>−</mi><mn>3</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>×</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>+</mi><mn>7</mn><mo form="postfix" stretchy="true">)</mo></mrow></mrow></mfrac><annotation encoding="application/x-tex">\frac{( + 12) \times ( - 4) \times ( - 1) \times ( + 5)}{( - 2) \times ( - 3) \times ( + 7)}</annotation></semantics></math></p>
+</blockquote>
+</article><footer>Opérations avec les relatifs — Activités</footer></main></div>
+<script>
+const details=[...document.querySelectorAll('details.correction')],cb=document.getElementById('correctionBtn');function lab(){cb.textContent=details.length&&details.every(d=>d.open)?'Masquer toutes les corrections':'Afficher toutes les corrections'}cb.onclick=()=>{let o=!details.every(d=>d.open);details.forEach(d=>d.open=o);lab()};details.forEach(d=>d.addEventListener('toggle',lab));
+const fb=document.getElementById('focusBtn');fb.onclick=()=>{document.body.classList.toggle('focus-mode');fb.textContent=document.body.classList.contains('focus-mode')?'Quitter le mode projection':'Mode projection'};
+const links=[...document.querySelectorAll('.nav-link')];const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('active',a.hash==='#'+e.target.id))}),{rootMargin:'-25% 0px -65% 0px'});document.querySelectorAll('article h2').forEach(h=>io.observe(h));
+</script></body></html>
